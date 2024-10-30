@@ -1,5 +1,7 @@
-This is my personal website.
-currently, it is built of CSS and HTML but i am planning to use Java Script.
-This is my first project
+This is my first project, my personal website.
+currently, it is built on CSS and HTML but i am planning to use Java Script further down the project.
+The goal is to have an interactive website which is visually appealing and effective. 
+
+
 
 
