@@ -5,28 +5,29 @@ body {
   }
 .background{
     background-image: url(images/potential_better_img.avif);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 .header{
-    position: absolute;
+    font:italic;
+    font-size:large;
+    position:absolute;
     left: 50%;
     top: 20%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    h1{
-        color:azure;
-}
+    color:azure;
 }
 .intro{
-    position: absolute;
+    font:Pacifico, calibri;
+    font-size: 10ms;
+    position:absolute;
     left: 50%;
     top: 30%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    p{
-        color:azure;
-    }
+    color:azure;
 }
 .face{
     position: absolute;
