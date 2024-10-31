@@ -7,8 +7,15 @@ body{
         color:azure;
     }
 }
+.background{
+    width: 2500px;
+    height: 1000px;
+    background-image: url(images/nice_background.avif);
+    background-size: 100%;
+}
 .face{
     width: 100px;
     height: 100px;
     background-image: url(images/me.png);
+    background-size: 100%;
 }
