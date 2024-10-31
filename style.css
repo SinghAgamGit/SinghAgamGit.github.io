@@ -13,6 +13,7 @@ body {
     left: 50%;
     top: 20%;
     transform: translateX(-50%) translateY(-50%);
+    text-align: center;
     h1{
         color:azure;
 }
@@ -22,6 +23,7 @@ body {
     left: 50%;
     top: 30%;
     transform: translateX(-50%) translateY(-50%);
+    text-align: center;
     p{
         color:azure;
     }
