@@ -1,18 +1,31 @@
-body{
-    background-color: black;
+
+.background{
+    width: auto;
+    height: auto;
+    background-image: url(images/potential_better_img.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header{
+    position: absolute;
+    left: 520px;
+    top: 200px;
     h1{
-        color: white;
-    }
+        color:azure;
+}
+}
+.intro{
+    position: absolute;
+    left: 360px;
+    top: 250px;
     p{
         color:azure;
     }
 }
-.background{
-    background-image: url(images/potential_better_img.avif);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
 .face{
+    position: absolute;
+    left: 650px;
+    top: 100px;
     width: 100px;
     height: 100px;
     background-image: url(images/me.png);
