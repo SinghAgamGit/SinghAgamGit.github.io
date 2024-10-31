@@ -1,9 +1,7 @@
 
 .background{
-    width: auto;
-    height: auto;
     background-image: url(images/potential_better_img.avif);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 .header{
