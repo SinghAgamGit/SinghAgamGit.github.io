@@ -8,9 +8,8 @@ body{
     }
 }
 .background{
-    width: 1424px;
-    height: 1000px;
-    background-image: url(images/nice_background.avif);
+    background-image: url(images/potential_better_img.avif);
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 .face{
