@@ -3,16 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agam's personal website</title>
-    <link rel = "stylesheet" href = "style.css">
+    <title>Agam's Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class = "background">
-    <div class="face"></div>
-    <div class = "header">
-        <h1> Agam's Personal Website</h1>
-    </div>
-    <div class="intro">
-        <p>Hi, my name is Agam, I am currently a first year Computer Engineering student at the University of Ottawa.</p>
-    </div>
+<body>
+    <header class="navbar">
+        <div class="logo">Agam</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-pic"></div>
+            <h1>Welcome to My World</h1>
+            <p class="hero-text"></p>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Hi! My name is Agam and I am currently a first year computer engineering student at the university of Ottawa.</p>
+    </section>
+    
+    <section id="portfolio" class="portfolio-section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>ITI 1120</h3>
+                <p>here are my past python assingments</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>ITI 1121</h3>
+                <p>here are my past java assingments</p>
+            </div>
+            <div class="portfolio-card">
+                <h3>personal website</h3>
+                <p>This!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via my social media links below.</p>
+        <div class="social-icons">
+            <a href="https://github.com/SinghAgamGit/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/agamsinghuottawa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:asing041@uottawa.ca"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Agam's Personal Website | Designed with ❤️</p>
+    </footer>
 </body>
 </html>

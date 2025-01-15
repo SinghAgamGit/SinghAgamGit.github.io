@@ -1,52 +1,170 @@
-
-*{
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    text-size-adjust: auto;
-    text-overflow: inherit;
+}
 
-}
-html{
-height:-webkit-fill-available;
-}
 body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background: #000;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('images/potential_better_img.avif') no-repeat center/cover;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    height:-webkit-fill-available;
-  }
-.background{
-    background-image: url(images/potential_better_img.avif);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-.header{
-    font:italic;
-    font-size:large;
-    position:absolute;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%) translateY(-50%);
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color:azure;
+    position: relative;
 }
-.intro{
-    font:Pacifico, calibri;
-    font-size: 10ms;
-    position:absolute;
-    left: 50%;
-    top: 30%;
-    transform: translateX(-50%) translateY(-50%);
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url('images/me.png') no-repeat center/cover;
+    border: 3px solid white;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Typewriter Effect */
+.hero-text {
+    font-size: 1.5rem;
+    color: #f39c12; /* Golden text color */
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    display: inline-block;
+    border-right: 3px solid #f39c12;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Start with no width */
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing and blinking cursor */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 2rem;
+    background: #111;
     text-align: center;
-    color:azure;
 }
-.face{
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 100px;
-    height: 100px;
-    background-image: url(images/me.png);
-    background-size: 120%;
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 4rem 2rem;
+    background: #222;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    background: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    color: white;
+}
+
+.portfolio-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 2rem;
+    background: #111;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f39c12;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    font-size: 0.9rem;
 }
