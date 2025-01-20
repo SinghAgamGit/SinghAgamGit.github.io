@@ -67,7 +67,7 @@ If you want to clone this repository and run it locally:
 
 For any questions or feedback, feel free to reach out:
 
-- **Email**: [mailto:asing041@uottawa.ca]
+- **Email**: asing041@uottawa.ca
 - **LinkedIn**: [https://www.linkedin.com/in/agamsinghuottawa/](#)
 - **GitHub**: [https://github.com/SinghAgamGit](#)
 
