@@ -1,8 +1,8 @@
 const dynamicText = document.getElementById('dynamic-text');
 
 const phrases = [
-    "Welcome to My World",
-    "Computer Engineering Student",
+    "Welcome to My Website!",
+    "1st Year Computer Engineering Student",
     "Aspiring Developer",
     "Lifelong Learner"
 ];
