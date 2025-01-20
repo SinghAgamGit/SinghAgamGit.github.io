@@ -20,30 +20,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     z-index: 10;
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #f39c12;
+    color: #ffffff;
 }
 
 /* Hero Section */
@@ -59,45 +60,35 @@ body {
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: url('images/me.png') no-repeat center/cover;
     border: 3px solid white;
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 20%; /* Adjust this value to control vertical positioning */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    animation: fadeIn 1.5s ease;
+.hero-content {
+    margin-top: 120px; /* Push the text below the profile picture */
+    text-align: center;
 }
 
-/* Typewriter Effect */
 .hero-text {
-    font-size: 1.5rem;
-    color: #f39c12; /* Golden text color */
-    font-weight: 400;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
     line-height: 1.5;
-    margin-top: 1.5rem;
     display: inline-block;
-    border-right: 3px solid #f39c12;
+    border-right: 3px solid #ffffff;
     white-space: nowrap;
     overflow: hidden;
-    width: 0; /* Start with no width */
-    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing and blinking cursor */
+    animation: blink-cursor 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
+@keyframes blink-cursor {
     50% {
         border-color: transparent;
     }
@@ -105,66 +96,113 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 4rem 2rem;
     background: #111;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
 .about-section h2 {
-    font-size: 2rem;
+    color: #ffffff;
     margin-bottom: 1rem;
-    color: #f39c12;
+    font-size: 2rem;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Portfolio Section */
 .portfolio-section {
-    padding: 4rem 2rem;
     background: #222;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
+.portfolio-section h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
 .portfolio-grid {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .portfolio-card {
     background: #333;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
-    width: 300px;
-    text-align: left;
-    color: white;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .portfolio-card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #ccc;
 }
 
 /* Contact Section */
 .contact-section {
-    padding: 4rem 2rem;
     background: #111;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
+.contact-section h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .social-icons a {
-    margin: 0 0.5rem;
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #f39c12;
+    transform: scale(1.2);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
     background: #000;
+    text-align: center;
+    padding: 1rem 0;
+    color: #ccc;
     font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
 }
