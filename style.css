@@ -116,42 +116,78 @@ body {
 
 /* Portfolio Section */
 .portfolio-section {
-    background: #222;
-    padding: 4rem 2rem;
+    background: #1e1e1e;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
 .portfolio-section h2 {
-    color: #ffffff;
-    margin-bottom: 1rem;
+    color: #f39c12;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
 }
 
 .portfolio-card {
     background: #333;
     padding: 1.5rem;
     border-radius: 8px;
-    text-align: center;
-    color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-card h3 {
-    margin-bottom: 1rem;
     font-size: 1.5rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
 }
 
 .portfolio-card p {
     font-size: 1rem;
-    color: #ccc;
+    margin-bottom: 1rem;
 }
+
+.portfolio-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.portfolio-link {
+    display: inline-block;
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.portfolio-link:hover {
+    color: #ffffff;
+}
+
+/* Project Logo */
+.project-logo {
+    width: 120px; /* Adjust the size to fit the other sections */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+}
+
+
 
 /* Contact Section */
 .contact-section {
