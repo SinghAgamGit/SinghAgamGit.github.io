@@ -47,7 +47,6 @@ body {
     color: #ffffff;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background: url('images/potential_better_img.avif') no-repeat center/cover;
@@ -57,6 +56,8 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
 .profile-pic {
@@ -65,32 +66,53 @@ body {
     border-radius: 50%;
     background: url('images/me.png') no-repeat center/cover;
     border: 3px solid white;
-    position: absolute;
-    top: 35%; /* Adjust this value to control vertical positioning */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 20px; 
 }
 
 .hero-content {
-    margin-top: 120px; /* Push the text below the profile picture */
     text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .hero-text {
-    font-size: 2.5rem;
+    font-size: 2rem; 
     color: #ffffff;
     font-weight: 700;
     line-height: 1.5;
     display: inline-block;
     border-right: 3px solid #ffffff;
-    white-space: nowrap;
+    white-space: pre-wrap;
     overflow: hidden;
     animation: blink-cursor 0.75s step-end infinite;
 }
 
+
 @keyframes blink-cursor {
     50% {
         border-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.5rem; 
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 1.2rem; 
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px; 
     }
 }
 
