@@ -113,13 +113,18 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
+        position: relative;
     }
 
     .navbar-toggle {
         display: flex;
+        position: absolute;
+        top: 1rem; 
+        right: 1.5rem; 
     }
 
     .nav-links {
@@ -137,11 +142,8 @@ body {
     .nav-links.active {
         display: flex; 
     }
-
-    .nav-links li {
-        padding: 1rem 0;
-    }
 }
+
 /* hero */
 .hero {
     height: 100vh;
