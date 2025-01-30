@@ -51,5 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Start typing on page load
 window.onload = () => {
-    typeText();
+    typeText(); 
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0); 
 };
