@@ -1,3 +1,4 @@
+// Dynamic Text Effect
 const dynamicText = document.getElementById('dynamic-text');
 
 const phrases = [
@@ -34,6 +35,19 @@ function deleteText() {
         setTimeout(typeText, 500);
     }
 }
+
+// Navigation Bar Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navbarToggle && navLinks) {
+        navbarToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navbarToggle.classList.toggle('active');
+        });
+    }
+});
 
 // Start typing on page load
 window.onload = () => {

@@ -12,7 +12,7 @@ body {
     background: #000;
 }
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
     position: sticky;
     top: 0;
@@ -30,23 +30,71 @@ body {
     color: #ffffff;
 }
 
-.navbar ul {
+.navbar nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar a {
+.navbar nav a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+.navbar nav a:hover {
     color: #ffffff;
 }
 
+
+.navbar-toggle {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-toggle {
+        display: flex; 
+    }
+
+    .navbar nav ul {
+        display: none; 
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1rem 0;
+    }
+
+    .navbar nav ul.active {
+        display: flex; 
+    }
+}
 /* hero */
 .hero {
     height: 100vh;
