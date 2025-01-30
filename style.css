@@ -12,6 +12,7 @@ body {
     background: #000;
 }
 
+
 /* Navbar styles */
 .navbar {
     position: sticky;
@@ -24,13 +25,15 @@ body {
     z-index: 10;
 }
 
+
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
 }
 
-.navbar nav ul {
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
@@ -38,35 +41,75 @@ body {
     padding: 0;
 }
 
-.navbar nav a {
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-.navbar nav a:hover {
+.nav-links a:hover {
     color: #ffffff;
 }
 
 
 .navbar-toggle {
-    display: none; 
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 30px;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
+    z-index: 20;
 }
 
 .hamburger {
-    width: 100%;
+    display: block;
+    width: 30px;
     height: 3px;
-    background: white;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+
+.navbar-toggle.active .hamburger {
+    background: transparent;
+}
+
+.navbar-toggle.active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 
@@ -76,23 +119,27 @@ body {
     }
 
     .navbar-toggle {
-        display: flex; 
+        display: flex;
     }
 
-    .navbar nav ul {
-        display: none; 
+    .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 1rem;
         position: absolute;
-        top: 100%; 
+        top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         padding: 1rem 0;
+        text-align: center;
     }
 
-    .navbar nav ul.active {
+    .nav-links.active {
         display: flex; 
+    }
+
+    .nav-links li {
+        padding: 1rem 0;
     }
 }
 /* hero */
