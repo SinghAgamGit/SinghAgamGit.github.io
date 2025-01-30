@@ -47,6 +47,7 @@ body {
     color: #ffffff;
 }
 
+/* hero */
 .hero {
     height: 100vh;
     background: url('images/potential_better_img.avif') no-repeat center/cover;
@@ -56,7 +57,7 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 20px; 
+    padding: 20px; /* Add padding for better spacing on mobile */
     box-sizing: border-box;
 }
 
@@ -66,56 +67,60 @@ body {
     border-radius: 50%;
     background: url('images/me.png') no-repeat center/cover;
     border: 3px solid white;
-    margin-bottom: 20px; 
+    position: absolute;
+    top: 35%; /* Keep the profile picture at 35% from the top */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally */
 }
 
 .hero-content {
+    margin-top: 120px; /* Push the text below the profile picture */
     text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 90%; /* Prevent content from overflowing on small screens */
+    margin: 0 auto; /* Center the content */
 }
 
 .hero-text {
-    font-size: 2rem; 
+    font-size: 2rem; /* Default font size */
     color: #ffffff;
     font-weight: 700;
     line-height: 1.5;
     display: inline-block;
     border-right: 3px solid #ffffff;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Allow text to wrap */
     overflow: hidden;
     animation: blink-cursor 0.75s step-end infinite;
 }
 
-
+/* Blinking cursor animation */
 @keyframes blink-cursor {
     50% {
         border-color: transparent;
     }
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Smaller font size for mobile */
     }
 
     .profile-pic {
         width: 120px;
-        height: 120px; 
+        height: 120px; /* Smaller profile picture for mobile */
     }
 }
 
 @media (max-width: 480px) {
     .hero-text {
-        font-size: 1.2rem; 
+        font-size: 1.2rem; /* Even smaller font size for very small screens */
     }
 
     .profile-pic {
         width: 100px;
-        height: 100px; 
+        height: 100px; /* Smaller profile picture for very small screens */
     }
 }
-
 /* About Section */
 .about-section {
     background: #111;
