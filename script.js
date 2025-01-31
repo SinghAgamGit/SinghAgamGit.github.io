@@ -49,6 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Fetch GitHub Stats
+const githubStats = document.getElementById('github-stats');
+
+fetch('https://api.github.com/users/singhagamgit')
+    .then(response => response.json())
+    .then(data => {
+        githubStats.innerHTML = `
+            <p>Followers: ${data.followers}</p>
+            <p>Public Repos: ${data.public_repos}</p>
+            <p>GitHub URL: <a href="${data.html_url}" target="_blank">${data.html_url}</a></p>
+        `;
+    })
+    .catch(error => console.error('Error fetching GitHub data:', error));
+    
 // Start typing on page load
 window.onload = () => {
     typeText(); 
