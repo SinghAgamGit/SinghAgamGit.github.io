@@ -1,0 +1,116 @@
+:root{
+    --white: #f9faff;
+    --platinum: #e3e4e8;
+    --windsurfing: #32779b;
+    --marina: #5a91c7;
+    --gray: #9a9a9a;
+    --onyx: #3c3d44;
+    --charcoal: #343c47;
+    --corners: 24px 0;
+    --base-font-size: 1rem;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--base-font-size);
+    font-family: "inter", sans-serif;
+    background-color: var(--platinum);
+    color: var(--onyx);
+}
+.wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+h1 {
+    margin: 0rem;
+    padding: .3rem;
+    font-size: calc(var(--base-font-size) * 2.9);
+}
+h2 {
+    margin: .3rem;
+    font-size: var(--base-font-size);
+    text-transform: uppercase;
+    color: var(--windsurfing);
+    letter-spacing: 0.25em;
+}
+h3{
+    margin: 0;
+}
+p{
+    line-height: 1.5;
+}
+a {
+    color: var(--windsurfing);
+}
+a:hover {
+    color: var(--marina);
+}
+img {
+    max-width: 100%;
+    border-radius: var(--corners);
+}
+/* svg social icon bars */
+.icons{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: center;
+}
+ul svg{
+    width: 36px;
+    height: 36px;
+}
+.social{
+    fill: var(--windsurfing);
+}
+.social:hover{
+    fill: var(--marina);
+}
+/* about me styling */
+.main-article{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+.main-article img{
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+}
+@media(min-width: 750px){
+    :root{
+        --base-font-size: 1.125rem;
+    }
+    h1{
+        margin-left: -3px;
+    }
+    .wrapper {
+        padding: 5rem;
+    }
+    .main-article{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+    .main-article img{
+        max-height: 400px;
+        margin: 0 0 0 auto;
+        height: auto;
+        width: auto;
+        overflow: auto;
+    }
+    .icons{
+        justify-content: flex-start;
+    }
+}
