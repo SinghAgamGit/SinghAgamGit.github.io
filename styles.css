@@ -14,7 +14,7 @@ html{
     box-sizing: border-box;
 }
 
-body {
+.main {
     font-size: var(--base-font-size);
     font-family: "inter", sans-serif;
     background-color: var(--platinum);
