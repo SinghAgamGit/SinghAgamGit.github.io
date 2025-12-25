@@ -9,17 +9,22 @@
     --corners: 24px 0;
     --base-font-size: 1rem;
     --corners-small: 10px 0;
+    --ld-background: light-dark(var(--platinum), var(--charcoal));
+    --ld-text: light-dark(var(--onyx), var(--white));
+    --ld-projects: light-dark(var(--white), #2e313d);
+    --ld-blue: light-dark(var(--windsurfing), #6dadd0);
 }
 
 html{
     box-sizing: border-box;
+    color-scheme: light dark;
 }
 
-.main {
+.main{
     font-size: var(--base-font-size);
     font-family: "inter", sans-serif;
-    background-color: var(--platinum);
-    color: var(--onyx);
+    background-color: var(--ld-background);
+    color: var(--ld-text);
 }
 .wrapper{
     max-width: 900px;
@@ -45,7 +50,7 @@ p{
     line-height: 1.5;
 }
 a {
-    color: var(--windsurfing);
+    color: var(--ld-blue);
 }
 a:hover {
     color: var(--marina);
@@ -125,7 +130,7 @@ main{
     text-align: center;
 }
 .project {
-    background-color: var(--white);
+    background-color: var(--ld-projects);
     padding: 3rem;
     border-radius: var(--corners);
     display: grid;
@@ -155,6 +160,12 @@ main{
 }
 .projects a {
     grid-row: 1/2;
+}
+/* light dark button */
+fieldset{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 @media(min-width: 750px){
     :root{
