@@ -8,6 +8,7 @@
     --charcoal: #343c47;
     --corners: 24px 0;
     --base-font-size: 1rem;
+    --corners-small: 10px 0;
 }
 
 html{
@@ -88,6 +89,73 @@ ul svg{
     width: 300px;
     overflow: hidden;
 }
+/* footer styling */
+footer{
+    text-align: center;
+}
+.footer-text {
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.footer-text-box ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: calc(var(--base-font-size)* .85);
+}
+.footer-text-box li{
+    line-height: 2;
+}
+.h2-footer{
+    margin: 2rem 0;
+}
+footer .social{
+    fill: var(--onyx);
+}
+footer .social:hover{
+    fill: var(--marina);
+}
+/* projects css */
+
+main{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.project {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--corners);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+.projects{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
+.project ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.project li{
+    background-color: var(--marina);
+    color: var(--white);
+    padding: .5rem;
+    border-radius: var(--corners-small);
+    font-size: calc(var(--base-font-size)*.85);
+}
+.projects a {
+    grid-row: 1/2;
+}
 @media(min-width: 750px){
     :root{
         --base-font-size: 1.125rem;
@@ -113,4 +181,25 @@ ul svg{
     .icons{
         justify-content: flex-start;
     }
+    footer {
+        text-align: left;
+    }
+    .footer-text{
+        grid-template-columns: 1fr 1fr;
+
+    }
+    @media(min-width:850px){
+        main{
+            text-align: left;
+        }
+    .project {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project a{
+        grid-row: auto;
+    }
+    .project ul{
+        justify-content: flex-start;
+    }
+}
 }
