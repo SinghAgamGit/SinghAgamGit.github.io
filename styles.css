@@ -127,6 +127,70 @@ footer .social{
 footer .social:hover{
     fill: var(--marina);
 }
+/* experience / leadership / education entries */
+.entries{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
+.entry{
+    background-color: var(--ld-projects);
+    padding: 3rem;
+    border-radius: var(--corners);
+}
+.entry-header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .5rem;
+}
+.entry-org{
+    color: var(--ld-blue);
+    font-weight: 600;
+    margin: .3rem 0 1rem;
+}
+.entry-dates{
+    color: var(--gray);
+    font-size: calc(var(--base-font-size) * .85);
+    white-space: nowrap;
+}
+.entry ul{
+    margin: 0;
+    padding-left: 1.2rem;
+}
+.entry li{
+    margin-bottom: .5rem;
+}
+.entry p + p{
+    margin-top: .5rem;
+}
+/* skills css */
+.skills{
+    margin-top: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.75rem;
+}
+.skill-group h3{
+    margin-bottom: .75rem;
+}
+.skill-tags{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: .75rem;
+}
+.skill-tags li{
+    background-color: var(--marina);
+    color: var(--white);
+    padding: .5rem 1rem;
+    border-radius: var(--corners-small);
+    font-size: calc(var(--base-font-size)*.85);
+}
 /* projects css */
 
 main{
@@ -279,6 +343,9 @@ main{
         overflow: auto;
     }
     .icons{
+        justify-content: flex-start;
+    }
+    .skill-tags{
         justify-content: flex-start;
     }
     footer {

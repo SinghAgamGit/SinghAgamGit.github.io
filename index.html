@@ -8,13 +8,16 @@
 
     <meta
         name="description"
-        content="Agam Singh is a Computer Engineering student at the University of Ottawa. View projects, GitHub, experience, and portfolio work."
+        content="Agam Singh is a Computer Engineering student at the University of Ottawa working as an Intern Developer at Tata Consultancy Services and a Software Research Assistant on UAV simulation. View projects, experience, and portfolio work."
     >
     <meta name="robots" content="index, follow">
     <meta name="author" content="Agam Singh">
 
     <link rel="canonical" href="https://singhagam.ca/">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 
     <meta property="og:type" content="website">
@@ -22,7 +25,7 @@
     <meta property="og:title" content="Agam Singh | Computer Engineering Student & Software Developer">
     <meta
         property="og:description"
-        content="Computer Engineering student at the University of Ottawa. Projects, GitHub, portfolio, and technical work by Agam Singh."
+        content="Computer Engineering student at the University of Ottawa gaining industry experience at Tata Consultancy Services and doing UAV research. Projects, experience, and portfolio work by Agam Singh."
     >
     <meta property="og:image" content="https://singhagam.ca/images/preview.png">
 
@@ -40,14 +43,37 @@
       "@type": "Person",
       "name": "Agam Singh",
       "url": "https://singhagam.ca/",
+      "image": "https://singhagam.ca/images/Singh_Agam.jpg",
+      "description": "Computer Engineering student at the University of Ottawa working in software development, quality engineering, and applied research.",
       "sameAs": [
-        "https://www.linkedin.com/in/agamsinghuottawa/"
+        "https://www.linkedin.com/in/agamsinghuottawa/",
+        "https://github.com/Singhagamgit"
       ],
       "jobTitle": "Computer Engineering Student",
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "University of Ottawa"
-      }
+      },
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Tata Consultancy Services"
+        },
+        {
+          "@type": "Organization",
+          "name": "Computational Analysis and Research Group, University of Ottawa"
+        }
+      ],
+      "knowsAbout": [
+        "Software Development",
+        "Quality Engineering",
+        "REST API Testing",
+        "Java",
+        "Python",
+        "JavaScript",
+        "Data Structures & Algorithms",
+        "UAV Simulation"
+      ]
     }
     </script>
 </head>
@@ -98,21 +124,48 @@
         </li>
     </ul>
     </div>
-    <img src = "images/Singh_Agam.png" alt = "me">
+    <img src = "images/Singh_Agam.jpg" alt = "Agam Singh, Computer Engineering student at the University of Ottawa">
     </article>
+    <main>
+    <div class = "entries">
+        <h2>Experience</h2>
+        <div class = "entry">
+            <div class = "entry-header">
+                <h3>Intern Developer</h3>
+                <span class = "entry-dates">June 2026 – Sept 2026</span>
+            </div>
+            <p class = "entry-org">Tata Consultancy Services · Toronto, ON</p>
+            <ul>
+                <li>Supporting quality engineering for a major Canadian bank's enterprise payments platform, developing automated BDD test scenarios in Java with the Cucumber framework.</li>
+                <li>Designing and executing end-to-end test cases across enterprise API chains, covering REST APIs and Kafka event streams with JSON payload, authentication, schema, and data mapping validation.</li>
+            </ul>
+        </div>
+        <div class = "entry">
+            <div class = "entry-header">
+                <h3>Software Research Assistant</h3>
+                <span class = "entry-dates">May 2026 – Sept 2026</span>
+            </div>
+            <p class = "entry-org">Computational Analysis and Research Group, University of Ottawa · Ottawa, ON</p>
+            <ul>
+                <li>Built a UAV simulation replay and analysis tool that processes JSON telemetry and motion data to reconstruct flight paths, movement trails, and sensor fields of view over geospatial map data.</li>
+                <li>Implemented sensor-planning logic for defining UAV paths, positioning camera and radar sensors, adjusting orientation parameters, and evaluating simulated flight-path coverage.</li>
+            </ul>
+        </div>
+    </div>
+    </main>
     <main>
     <div class = "projects">
         <h2>Projects</h2>
     <article class = "project">
         <div class = "text">
-        <h3>Data Structures & Graph Algorithms (Programming Assignments)</h3>
-        <p>Implemented two algorithm-focused projects in Java centered on efficient data structures and graph theory. Designed a Union-Find solution to analyze island connectivity, then modeled the Paris Metro as a weighted graph by identifying hub stations, constructing a reduced hub network, and computing a minimum spanning tree using Kruskal’s algorithm. Emphasis on correctness, scalability, and clean algorithmic design.</p>
+        <h3>Paris Metro Network Analysis</h3>
+        <p>Modeled the Paris Metro network — 376 stations and 933 connections — as an adjacency-list graph in Java, detecting transfer hubs by clustering walking edges with a custom linked-list Union-Find ADT using union-by-size. Implemented Kruskal's algorithm with a priority queue to compute the minimum spanning tree over hub-to-hub segments; the solution was accepted by the UVA Online Judge (Problem 11710) with a 1.42s runtime.</p>
         <ul>
         <li>Java</li>
         </ul>
         </div>
         <a href="https://github.com/SinghAgamGit/Data-Structures-and-Algorithms-Programming-assignments" target="_blank">
-            <img src = "images/Paris_metro.png" alt = "paris_metro_graph">
+            <img src = "images/Paris_metro.png" alt = "Paris Metro map used as the graph model for the union-find and Kruskal's algorithm project">
         </a>
     </article>
         <article class = "project">
@@ -128,7 +181,7 @@
         </ul>
         </div>
         <a href="https://locksmith-ai.onrender.com/" target="_blank">
-            <img src = "images/LockSmithAI-logo.png" alt = "Lock_Smith_AI_Logo">
+            <img src = "images/LockSmithAI-logo.png" alt = "LockSmith AI logo, an AI-powered secure access web application">
         </a>
         </article>
     <article class = "project">
@@ -142,13 +195,102 @@
         </ul>
         </div>
         <a href="https://chat-app-node-svtx.onrender.com" target="_blank">
-            <img src = "images/Node_chat_app.png" alt = "Screenshot_of_the_app">
+            <img src = "images/Node_chat_app.png" alt = "Screenshot of the real-time chat application built with Node.js and Socket.IO">
         </a>
     </article>
     </div>
     </main>
+    <main>
+    <div class = "entries">
+        <h2>Leadership</h2>
+        <div class = "entry">
+            <div class = "entry-header">
+                <h3>Co-President</h3>
+                <span class = "entry-dates">May 2026 – Present</span>
+            </div>
+            <p class = "entry-org">Hack the Hill · Ottawa, ON</p>
+            <ul>
+                <li>Co-leading a 40-person organizing team across sponsorship, logistics, development, communications, and community verticals to deliver a 400+ hacker event in September 2026.</li>
+                <li>Overseeing a $40K+ budget, managing sponsor relationships, partner outreach, and operational planning to ensure a high-quality hacker experience.</li>
+            </ul>
+        </div>
+        <div class = "entry">
+            <div class = "entry-header">
+                <h3>Board of Directors, Faculty of Engineering Representative</h3>
+                <span class = "entry-dates">May 2026 – Present</span>
+            </div>
+            <p class = "entry-org">University of Ottawa Students' Union · Ottawa, ON</p>
+            <ul>
+                <li>Represent engineering students in governance decisions involving student services, advocacy initiatives, and oversight of an $8M+ annual operating budget.</li>
+            </ul>
+        </div>
+    </div>
+    </main>
+    <main>
+    <div class = "entries">
+        <h2>Education</h2>
+        <div class = "entry">
+            <div class = "entry-header">
+                <h3>Bachelor of Applied Science (BASc), Computer Engineering</h3>
+                <span class = "entry-dates">Sept 2024 – May 2029</span>
+            </div>
+            <p class = "entry-org">University of Ottawa · Ottawa, ON</p>
+            <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Computer Architecture, Software Engineering, Probability & Statistics</p>
+            <p><strong>Distinctions:</strong> Dean's Honour List (Fall 2025)</p>
+        </div>
+    </div>
+    <div class = "skills">
+        <h2>Skills</h2>
+        <div class = "skill-group">
+            <h3>Languages</h3>
+            <ul class = "skill-tags">
+                <li>Java</li>
+                <li>Python</li>
+                <li>C++</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class = "skill-group">
+            <h3>Testing & QE</h3>
+            <ul class = "skill-tags">
+                <li>REST API Testing</li>
+                <li>Cucumber (BDD)</li>
+                <li>REST Assured</li>
+                <li>Postman</li>
+                <li>TestNG</li>
+                <li>Apache Kafka</li>
+                <li>JSON</li>
+                <li>Schema & Mapping Validation</li>
+                <li>Defect Tracking</li>
+            </ul>
+        </div>
+        <div class = "skill-group">
+            <h3>Tools</h3>
+            <ul class = "skill-tags">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Jira</li>
+                <li>Confluence</li>
+                <li>MATLAB</li>
+                <li>VS Code</li>
+            </ul>
+        </div>
+        <div class = "skill-group">
+            <h3>Concepts</h3>
+            <ul class = "skill-tags">
+                <li>OOP</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Client-Server & Event-Driven Architecture</li>
+                <li>WebSockets</li>
+                <li>SDLC</li>
+                <li>Agile/Scrum</li>
+            </ul>
+        </div>
+    </div>
+    </main>
     <footer>
-        <h2 class = "h2-footer" >Other Projects</h2> 
+        <h2 class = "h2-footer" >Other Projects</h2>
         <div class = "footer-text">
         <div class = "footer-text-box">
         <h3>Personal projects</h3>
