@@ -142,7 +142,7 @@ footer .social:hover{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     gap: .5rem;
 }
 .entry-org{
@@ -198,7 +198,8 @@ main{
     margin-bottom: 3rem;
     text-align: center;
 }
-.project {
+.project,
+.entry-project {
     background-color: var(--ld-projects);
     padding: 3rem;
     border-radius: var(--corners);
@@ -227,8 +228,22 @@ main{
     border-radius: var(--corners-small);
     font-size: calc(var(--base-font-size)*.85);
 }
-.projects a {
+.projects a,
+.entry-project > a {
     grid-row: 1/2;
+}
+/* center logos in their cell so wide/short wordmarks don't leave dead space below */
+.entry-project > a {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+}
+.entry-project > a img {
+    max-height: 150px;
+    max-width: 100%;
+    width: auto;
 }
 /* light dark button */
 
@@ -359,10 +374,12 @@ main{
         main{
             text-align: left;
         }
-    .project {
+    .project,
+    .entry-project {
         grid-template-columns: 1fr 1fr;
     }
-    .project a{
+    .project a,
+    .entry-project > a{
         grid-row: auto;
     }
     .project ul{
