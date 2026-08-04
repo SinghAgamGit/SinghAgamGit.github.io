@@ -138,13 +138,6 @@ footer .social:hover{
     padding: 3rem;
     border-radius: var(--corners);
 }
-.entry-header{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: .5rem;
-}
 .entry-org{
     color: var(--ld-blue);
     font-weight: 600;
@@ -244,6 +237,59 @@ main{
     max-height: 150px;
     max-width: 100%;
     width: auto;
+}
+/* "click me" hint pointing at the TCS logo, drawn coming from outside the card */
+.tcs-card {
+    position: relative;
+}
+/* TCS logo is a monochrome black mark — invert to white in dark mode so it stays visible */
+html:has(#mode-switcher #dark:checked) .tcs-logo-link img {
+    filter: invert(1);
+}
+.tcs-hint {
+    position: absolute;
+    color: #DA7756; /* Claude terracotta — warm, distinct from the blue accent */
+    font-size: calc(var(--base-font-size) * .8);
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+.tcs-hint.is-visible {
+    opacity: 1;
+}
+.tcs-hint-label {
+    position: absolute;
+    left: 60px;
+}
+.tcs-hint-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+/* narrow (single-column) layout: logo sits at the card top */
+.tcs-arrow-wide { display: none; }
+.tcs-hint {
+    top: -46px;
+    left: 2px;
+    width: 158px;
+}
+.tcs-hint-label { top: 44px; }
+/* wide (two-column) layout: logo sits mid-right, arrow rides across the top then drops in */
+@media (min-width: 850px) {
+    .tcs-arrow-narrow { display: none; }
+    .tcs-arrow-wide { display: block; }
+    .tcs-hint {
+        top: -40px;
+        left: -60px;
+        width: 510px;
+    }
+    .tcs-hint-label { left: 66px; top: 30px; }
 }
 /* light dark button */
 
