@@ -238,15 +238,19 @@ main{
     max-width: 100%;
     width: auto;
 }
-/* "click me" hint pointing at the TCS logo, drawn coming from outside the card */
-.tcs-card {
+/* CGI's wordmark is heavy and nearly square — cap it so it sits in balance with the other logos */
+.entry-project > .cgi-logo-link img {
+    max-height: 100px;
+}
+/* "click me" hint pointing at the top card's logo, drawn coming from outside the card */
+.hint-card {
     position: relative;
 }
 /* TCS logo is a monochrome black mark — invert to white in dark mode so it stays visible */
 html:has(#mode-switcher #dark:checked) .tcs-logo-link img {
     filter: invert(1);
 }
-.tcs-hint {
+.logo-hint {
     position: absolute;
     color: #DA7756; /* Claude terracotta — warm, distinct from the blue accent */
     font-size: calc(var(--base-font-size) * .8);
@@ -257,14 +261,14 @@ html:has(#mode-switcher #dark:checked) .tcs-logo-link img {
     opacity: 0;
     transition: opacity .5s ease-in-out;
 }
-.tcs-hint.is-visible {
+.logo-hint.is-visible {
     opacity: 1;
 }
-.tcs-hint-label {
+.logo-hint-label {
     position: absolute;
     left: 60px;
 }
-.tcs-hint-arrow {
+.logo-hint-arrow {
     position: absolute;
     top: 0;
     left: 0;
@@ -273,23 +277,34 @@ html:has(#mode-switcher #dark:checked) .tcs-logo-link img {
     overflow: visible;
 }
 /* narrow (single-column) layout: logo sits at the card top */
-.tcs-arrow-wide { display: none; }
-.tcs-hint {
+.hint-arrow-wide { display: none; }
+.logo-hint {
     top: -46px;
     left: 2px;
     width: 158px;
 }
-.tcs-hint-label { top: 44px; }
+.logo-hint-label { top: 44px; }
+/* pin the logo just under the arrowhead */
+.hint-card > a {
+    min-height: 0;
+    margin-top: 58px;
+}
 /* wide (two-column) layout: logo sits mid-right, arrow rides across the top then drops in */
 @media (min-width: 850px) {
-    .tcs-arrow-narrow { display: none; }
-    .tcs-arrow-wide { display: block; }
-    .tcs-hint {
+    .hint-arrow-narrow { display: none; }
+    .hint-arrow-wide { display: block; }
+    .logo-hint {
         top: -40px;
         left: -60px;
         width: 510px;
     }
-    .tcs-hint-label { left: 66px; top: 30px; }
+    .logo-hint-label { left: 66px; top: 30px; }
+    /* pin the logo where the arrow lands, so a taller card (more bullets) can't push it out from under the arrowhead */
+    .hint-card > a {
+        align-self: start;
+        justify-content: flex-start;
+        margin-top: 112px;
+    }
 }
 /* light dark button */
 
