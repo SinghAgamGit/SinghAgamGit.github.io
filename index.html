@@ -2,40 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>Agam Singh | Computer Engineering Student & Software Developer</title>
-
-    <meta
-        name="description"
-        content="Agam Singh — Computer Engineering co-op student at the University of Ottawa and Developer Co-op at CGI, working across Spring services, REST/OpenAPI, quality engineering, and UAV simulation research. See projects and experience."
-    >
+    <title>Agam Singh | Computer Engineering Student &amp; Software Developer</title>
+    <meta name="description" content="Agam Singh: Computer Engineering co-op student at the University of Ottawa and Developer Co-op at CGI, working across software development, quality engineering, and applied research.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Agam Singh">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
 
     <link rel="canonical" href="https://singhagam.ca/">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preload" href="fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Agam Singh">
     <meta property="og:url" content="https://singhagam.ca/">
-    <meta property="og:title" content="Agam Singh | Computer Engineering Student & Software Developer">
-    <meta
-        property="og:description"
-        content="Computer Engineering student at the University of Ottawa and Developer Co-op at CGI, previously at Tata Consultancy Services and a UAV research group. Projects, experience, and portfolio work by Agam Singh."
-    >
+    <meta property="og:title" content="Agam Singh | Computer Engineering Student &amp; Software Developer">
+    <meta property="og:description" content="Agam Singh: Computer Engineering co-op student at the University of Ottawa and Developer Co-op at CGI, working across software development, quality engineering, and applied research.">
     <meta property="og:image" content="https://singhagam.ca/images/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agam Singh, Computer Engineering Student and Software Developer, singhagam.ca">
+    <meta property="og:locale" content="en_CA">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agam Singh | Computer Engineering Student & Software Developer">
-    <meta
-        name="twitter:description"
-        content="Projects, GitHub, portfolio, and technical work by Agam Singh."
-    >
+    <meta name="twitter:title" content="Agam Singh | Computer Engineering Student &amp; Software Developer">
+    <meta name="twitter:description" content="Agam Singh: Computer Engineering co-op student at the University of Ottawa and Developer Co-op at CGI, working across software development, quality engineering, and applied research.">
     <meta name="twitter:image" content="https://singhagam.ca/images/preview.png">
+    <meta name="twitter:image:alt" content="Agam Singh, Computer Engineering Student and Software Developer, singhagam.ca">
+
+    <script>
+    // Apply a saved theme before first paint; with no saved choice, CSS follows the OS setting.
+    (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
+        } catch (e) {}
+    })();
+    </script>
 
     <script type="application/ld+json">
     {
@@ -44,6 +60,7 @@
       "name": "Agam Singh",
       "url": "https://singhagam.ca/",
       "image": "https://singhagam.ca/images/Singh_Agam.jpg",
+      "email": "mailto:contact@singhagam.ca",
       "description": "Computer Engineering student at the University of Ottawa working in software development, quality engineering, and applied research.",
       "sameAs": [
         "https://www.linkedin.com/in/agamsinghuottawa/",
@@ -87,337 +104,469 @@
     }
     </script>
 </head>
-<body class = "main">
-    <div class = "wrapper">
-        <header>
-            <fieldset id = "mode-switcher" class = "radio-switch">
-                <legend>Select a color mode: </legend>
-                <div>
-                    <input type = "radio" id = "light" name = "color-scheme" value = "light" checked>
-                    <label for = "light" Light>Light</label>
-                    <input type = "radio" id = "dark" name = "color-scheme" value = "dark">
-                    <label for = "dark" Light>Dark</label>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-inner wrap">
+            <a class="wordmark" href="#top">Agam Singh</a>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="menu-label">Menu</span><span class="menu-icon" aria-hidden="true"></span></button>
+            <div class="header-menu" id="site-menu">
+            <nav class="site-nav" aria-label="Sections">
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-switch" role="group" aria-label="Colour theme">
+                <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+                <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+        <section class="hero wrap" id="top" aria-labelledby="hero-name">
+            <h1 class="hero-name" id="hero-name">Agam Singh</h1>
+            <div class="hero-body">
+                <div class="hero-lead">
+                    <p class="hero-role">Computer Engineering co-op student at the University of Ottawa, now a Developer Co-op at CGI building Spring services for a major Canadian bank's payments platform.</p>
+                    <ul class="hero-actions">
+                        <li><a class="btn" href="mailto:contact@singhagam.ca">Email me</a></li>
+                        <li><a class="text-link" href="https://github.com/SinghAgamGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a></li>
+                        <li><a class="text-link" href="https://www.linkedin.com/in/agamsinghuottawa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a></li>
+                    </ul>
                 </div>
-            </fieldset>
-        </header>
-    <article class = "main-article">
-        <div class = "text">
-    <h1>Agam Singh</h1>
-    <h2>Computer Engineering Student at the University of Ottawa</h2>
-    <p>Computer Engineering co-op student at the University of Ottawa with experience in software development, quality engineering, and applied research. I'm currently a Developer Co-op at CGI, working on an enterprise payments platform for a major Canadian bank. Before that I was a quality engineering intern at Tata Consultancy Services, and I built UAV and counter-UAS simulation tools as a research assistant at the University of Ottawa.
-    <p>My work spans Java, Spring, Python, FastAPI, C/C++, SQL, JavaScript, and React, from API design and test automation to real-time systems and web-based visualization tools. I enjoy building practical software systems, testing user flows, debugging issues, and turning technical ideas into clean, usable products.</p>
-    <p>Outside of development, I take on leadership roles in student organizations and tech initiatives, where I work on communication, execution, event planning, and team coordination. I am interested in software engineering, cybersecurity, quality assurance, system design, and scalable products.</p>
-</p>
-    <ul class = "icons">
-        <li>
-                <a href = "https://github.com/SinghAgamGit" target="_blank">
-                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" stroke="#000000" stroke-linejoin="round"  class = "social">
-                   </path> </g></svg>
-            </a> 
-        </li>
-             <li>
-                <a href = "https://www.linkedin.com/in/agamsinghuottawa/" target="_blank">
-                    <svg fill="#000000" version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;} </style> 
-                        <path d="M26.2,4H5.8C4.8,4,4,4.8,4,5.7v20.5c0,0.9,0.8,1.7,1.8,1.7h20.4c1,0,1.8-0.8,1.8-1.7V5.7C28,4.8,27.2,4,26.2,4z M11.1,24.4 H7.6V13h3.5V24.4z M9.4,11.4c-1.1,0-2.1-0.9-2.1-2.1c0-1.2,0.9-2.1,2.1-2.1c1.1,0,2.1,0.9,2.1,2.1S10.5,11.4,9.4,11.4z M24.5,24.3 H21v-5.6c0-1.3,0-3.1-1.9-3.1c-1.9,0-2.1,1.5-2.1,2.9v5.7h-3.5V13h3.3v1.5h0.1c0.5-0.9,1.7-1.9,3.4-1.9c3.6,0,4.3,2.4,4.3,5.5V24.3z " class = "social"></path> 
-                        <rect id="_x3C_Transparent_Rectangle_x3E_" y="0" class="st0" width="32" height="32"></rect>
-                     </g>
-                    </svg>
-            </a> 
-        </li>
-                </li>
-             <li>
-                <a href = "mailto:contact@singhagam.ca" target="_blank">
-                    <svg viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#1572]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path class = "social" d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#1572]"> </path> </g> </g> </g> </g></svg>   
-                </a> 
-        </li>
-    </ul>
-    </div>
-    <img src = "images/Singh_Agam.jpg" alt = "Agam Singh, Computer Engineering student at the University of Ottawa">
-    </article>
-    <main>
-    <div class = "entries">
-        <h2>Experience</h2>
-        <article class = "entry entry-project hint-card">
-            <div class = "logo-hint" aria-hidden="true">
-                <span class = "logo-hint-label">Click me</span>
-                <svg class = "logo-hint-arrow hint-arrow-wide" viewBox="-60 -40 510 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M -52.0 -34.0 L -52.8 -30.2 L -53.3 -26.6 L -53.5 -23.2 L -53.6 -20.0 L -53.4 -17.0 L -53.1 -14.1 L -52.5 -11.4 L -51.8 -8.9 L -50.9 -6.5 L -49.9 -4.3 L -48.7 -2.2 L -47.5 -0.3 L -46.1 1.6 L -44.7 3.3 L -43.1 4.9 L -41.6 6.4 L -39.9 7.8 L -38.3 9.1 L -36.6 10.3 L -33.7 13.4 L -32.1 15.2 L -30.2 16.6 L -28.2 17.8 L -25.9 18.6 L -23.6 19.0 L -21.3 19.1 L -18.9 18.8 L -16.6 18.2 L -14.5 17.2 L -12.5 15.8 L -10.7 14.2 L -9.3 12.4 L -8.1 10.3 L -7.3 8.0 L -6.8 5.7 L -6.7 3.3 L -7.0 0.9 L -7.7 -1.4 L -8.7 -3.6 L -10.0 -5.6 L -11.6 -7.3 L -13.5 -8.8 L -15.6 -10.0 L -17.9 -10.9 L -20.2 -11.3 L -22.6 -11.4 L -25.0 -11.2 L -27.4 -10.5 L -29.6 -9.5 L -31.6 -8.2 L -33.4 -6.5 L -34.9 -4.6 L -36.1 -2.5 L -37.0 -0.2 L -37.5 2.1 L -37.6 4.6 L -37.4 7.0 L -36.7 9.4 L -35.7 11.6 L -34.4 13.7 L -32.7 15.5 L -30.8 17.0 L -28.7 18.3 L -18.6 16.4 L -8.4 14.7 L 2.0 13.0 L 12.5 11.5 L 23.2 10.0 L 34.1 8.7 L 45.1 7.5 L 56.1 6.5 L 67.3 5.5 L 78.6 4.7 L 89.9 4.1 L 101.3 3.6 L 112.7 3.2 L 124.2 3.0 L 135.6 3.0 L 147.1 3.1 L 158.5 3.4 L 170.0 3.9 L 181.4 4.5 L 192.7 5.4 L 204.0 6.4 L 215.1 7.6 L 226.2 9.1 L 237.2 10.7 L 248.0 12.5 L 258.8 14.6 L 269.3 16.9 L 279.7 19.4 L 289.9 22.1 L 300.0 25.1 L 309.8 28.3 L 319.4 31.7 L 328.8 35.4 L 337.9 39.3 L 346.8 43.6 L 355.4 48.0 L 363.7 52.8 L 371.7 57.8 L 379.3 63.1 L 386.7 68.6 L 393.7 74.5 L 400.4 80.6 L 406.7 87.1 L 412.6 93.9 L 418.1 100.9 L 423.2 108.3 L 427.8 116.0 L 432.1 124.0 L 435.9 132.3 L 439.2 141.0 L 442.0 150.0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/>
-                    <path d="M444.3 155.0 L434.9 147.2 L444.6 142.8 Z" fill="currentColor"/>
-                </svg>
-                <svg class = "logo-hint-arrow hint-arrow-narrow" viewBox="2 -46 158 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 10.0 -40.0 L 8.9 -36.1 L 8.2 -32.5 L 8.0 -29.2 L 8.1 -26.0 L 8.6 -23.0 L 9.4 -20.1 L 10.4 -17.3 L 11.6 -14.6 L 13.1 -11.9 L 14.7 -9.2 L 16.4 -6.5 L 18.2 -3.7 L 20.1 -0.8 L 21.9 2.3 L 23.8 5.5 L 25.5 8.9 L 27.2 12.6 L 29.9 18.2 L 31.3 19.7 L 33.0 21.0 L 34.8 22.0 L 36.8 22.7 L 38.9 23.0 L 41.0 23.1 L 43.1 22.8 L 45.1 22.1 L 46.9 21.2 L 48.6 19.9 L 50.1 18.4 L 51.4 16.7 L 52.3 14.8 L 52.9 12.8 L 53.2 10.7 L 53.2 8.6 L 52.8 6.5 L 52.1 4.5 L 51.1 2.6 L 49.8 0.9 L 48.2 -0.5 L 46.4 -1.7 L 44.5 -2.6 L 42.4 -3.2 L 40.3 -3.4 L 38.1 -3.3 L 36.0 -2.8 L 34.0 -2.0 L 32.2 -0.9 L 30.5 0.4 L 29.1 2.1 L 28.0 3.9 L 27.1 5.9 L 26.6 8.0 L 26.5 10.2 L 26.6 12.3 L 27.2 14.4 L 28.0 16.4 L 29.2 18.3 L 30.6 19.9 L 32.3 21.3 L 34.2 22.4 L 37.0 23.0 L 39.8 23.7 L 42.7 24.5 L 45.6 25.4 L 48.6 26.4 L 51.6 27.4 L 54.7 28.5 L 57.7 29.7 L 60.8 31.0 L 64.0 32.4 L 67.1 33.8 L 70.3 35.3 L 73.5 36.9 L 76.7 38.5 L 79.9 40.2 L 83.1 41.9 L 86.3 43.7 L 89.5 45.6 L 92.7 47.6 L 95.9 49.5 L 99.0 51.6 L 102.2 53.7 L 105.3 55.9 L 108.5 58.1 L 111.5 60.3 L 114.6 62.6 L 117.6 65.0 L 120.6 67.3 L 123.6 69.8 L 126.5 72.2 L 129.3 74.7 L 132.1 77.3 L 134.9 79.9 L 137.5 82.5 L 140.2 85.1 L 142.7 87.8 L 145.2 90.5 L 147.7 93.2 L 150.0 96.0" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/>
-                    <path d="M153.7 100.0 L142.4 95.5 L150.2 88.4 Z" fill="currentColor"/>
-                </svg>
+                <dl class="hero-facts">
+                    <div>
+                        <dt>Now</dt>
+                        <dd>Developer Co-op, CGI</dd>
+                    </div>
+                    <div>
+                        <dt>Before</dt>
+                        <dd>Intern Developer, Quality Engineering, Tata Consultancy Services</dd>
+                        <dd>Software Research Assistant, University of Ottawa</dd>
+                    </div>
+                    <div>
+                        <dt>Studying</dt>
+                        <dd>Honours BASc, Computer Engineering (Co-op), 2024 to 2029</dd>
+                    </div>
+                </dl>
             </div>
-            <div class = "text">
-                <h3>Developer, Co-op</h3>
-                <span class = "entry-dates">Sept 2026 – Dec 2027</span>
-                <p class = "entry-org">CGI · Toronto, ON</p>
-                <ul>
-                    <li>Rejoined the enterprise payments platform I tested at TCS, moving from quality engineering into development on Spring services for a major Canadian bank.</li>
-                    <li>Designing OpenAPI contracts for the platform's APIs and extending the automated test coverage built during my QE internship.</li>
+        </section>
+
+        <section class="section section-experience" id="experience" aria-labelledby="experience-heading">
+            <div class="wrap">
+                <h2 class="section-heading" id="experience-heading" data-reveal>Experience</h2>
+                <ol class="route">
+                    <li class="stop stop-current" data-reveal>
+                        <div class="stop-main">
+                            <h3 class="stop-role">Developer, Co-op</h3>
+                            <p class="stop-org"><a href="https://www.cgi.com" target="_blank" rel="noopener noreferrer" aria-label="CGI (opens in a new tab)">CGI</a> · Toronto, ON</p>
+                            <p class="stop-impact">Moved from quality engineering into development on the same payments platform I tested at TCS, building Spring services and OpenAPI contracts for a major Canadian bank.</p>
+                            <details class="stop-details">
+                                <summary aria-label="Details about the CGI role">Details</summary>
+                                <ul>
+                                    <li>Rejoined the enterprise payments platform I tested at TCS, moving from quality engineering into development on Spring services for a major Canadian bank.</li>
+                                    <li>Designing OpenAPI contracts for the platform's APIs and extending the automated test coverage I built during my QE internship.</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="stop-meta">
+                            <p class="stop-dates">Sept 2026 – Dec 2027</p>
+                            <span class="logo-tile"><img src="images/logo-cgi-96.webp" width="205" height="96" alt="CGI logo" loading="lazy" decoding="async"></span>
+                        </div>
+                    </li>
+                    <li class="stop" data-reveal>
+                        <div class="stop-main">
+                            <h3 class="stop-role">Intern Developer, Quality Engineering</h3>
+                            <p class="stop-org"><a href="https://www.tcs.com" target="_blank" rel="noopener noreferrer" aria-label="Tata Consultancy Services (opens in a new tab)">Tata Consultancy Services</a> · Toronto, ON</p>
+                            <p class="stop-impact">Built automated BDD API tests in Java (Cucumber, REST Assured, TestNG) for a major Canadian bank's enterprise payments platform, on-site full-time.</p>
+                            <details class="stop-details">
+                                <summary aria-label="Details about the TCS internship">Details</summary>
+                                <ul>
+                                    <li>Embedded full-time on-site with a major Canadian bank for the entire term, developing automated BDD API test scenarios in Java with Cucumber, REST Assured, and TestNG for its enterprise payments platform.</li>
+                                    <li>Designed and executed end-to-end test cases across chained REST APIs and Kafka event streams, validating JSON payloads, authentication, schema conformance, and request/response field mappings.</li>
+                                    <li>Tracked defects in Jira and documented test coverage and requirements analysis in Confluence, working directly with the bank's developers and QEs in an Agile delivery cycle.</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="stop-meta">
+                            <p class="stop-dates">June 2026 – Sept 2026</p>
+                            <span class="logo-tile"><img src="images/logo-tcs-logo-96.webp" width="402" height="96" alt="Tata Consultancy Services logo" loading="lazy" decoding="async"></span>
+                        </div>
+                    </li>
+                    <li class="stop" data-reveal>
+                        <div class="stop-main">
+                            <h3 class="stop-role">Software Research Assistant</h3>
+                            <p class="stop-org"><a href="https://www.carg-uottawa.com" target="_blank" rel="noopener noreferrer" aria-label="Computational Analysis and Research Group, University of Ottawa (opens in a new tab)">Computational Analysis and Research Group, University of Ottawa</a> · Ottawa, ON</p>
+                            <p class="stop-impact">Built a web-based UAV and counter-UAS simulation platform (React 19, Vite, FastAPI) that replays flight telemetry on a 2D map and a 3D globe.</p>
+                            <details class="stop-details">
+                                <summary aria-label="Details about the research assistant role">Details</summary>
+                                <ul>
+                                    <li>Built a web-based UAV and counter-UAS simulation platform (React 19, Vite, FastAPI) with a 2D Leaflet map and a CesiumJS 3D globe that replays JSON flight telemetry, trails, and camera/radar fields of view over real terrain.</li>
+                                    <li>Implemented sensor-planning tools for drawing UAV paths, placing ground cameras and radars, and estimating flight-path coverage. Scenarios export as JSON conforming to the group's MATLAB simulator schema, with range/option validation and a maintained log of schema conflicts for supervisor review.</li>
+                                    <li>Built the FastAPI backend with signed HTTP-only session authentication, admin-approved accounts, and an on-disk job queue that a remote MATLAB worker polls, reports status to, and uploads results through. Deployed frontend and backend behind Nginx and a Cloudflare Tunnel on a self-hosted Ubuntu server.</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="stop-meta">
+                            <p class="stop-dates">May 2026 – Sept 2026</p>
+                            <span class="logo-tile logo-tile-fill"><img src="images/logo-carg-logo-96.webp" width="296" height="96" alt="Computational Analysis and Research Group logo" loading="lazy" decoding="async"></span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section-projects" id="projects" aria-labelledby="projects-heading">
+            <div class="wrap">
+                <h2 class="section-heading" id="projects-heading" data-reveal>Projects</h2>
+
+                <article class="project project-feature" aria-labelledby="p-metro">
+                    <h3 class="project-title" id="p-metro" data-reveal>Paris Metro Network Analysis</h3>
+                    <figure class="project-media" data-reveal>
+                        <img
+                            src="images/paris-metro-900.webp"
+                            srcset="images/paris-metro-900.webp 900w, images/paris-metro-1600.webp 1600w"
+                            sizes="(min-width: 960px) 58vw, 100vw"
+                            width="1600" height="1127"
+                            alt="Map of the Paris Metro and RER lines, the network modelled as a graph in this project"
+                            loading="lazy" decoding="async">
+                    </figure>
+                    <ul class="figures" data-reveal>
+                        <li><span class="figure-num">376</span> <span class="figure-label">stations in the graph</span></li>
+                        <li><span class="figure-num">933</span> <span class="figure-label">connections between them</span></li>
+                        <li><span class="figure-num">1.42s</span> <span class="figure-label">runtime, accepted by the UVA Online Judge (Problem 11710)</span></li>
+                    </ul>
+                    <div class="project-body" data-reveal>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem</dt>
+                                <dd>Compute the minimum spanning tree over the transfer hubs of the Paris Metro network.</dd>
+                            </div>
+                            <div>
+                                <dt>Built</dt>
+                                <dd>An adjacency-list graph in Java. Transfer hubs are detected by clustering walking edges with a custom linked-list Union-Find ADT using union-by-size, then Kruskal's algorithm with a priority queue computes the minimum spanning tree over hub-to-hub segments.</dd>
+                            </div>
+                            <div>
+                                <dt>Stack</dt>
+                                <dd><ul class="tags"><li>Java</li></ul></dd>
+                            </div>
+                        </dl>
+                        <a class="btn" href="https://github.com/SinghAgamGit/Data-Structures-and-Algorithms-Programming-assignments" target="_blank" rel="noopener noreferrer" aria-label="View code on GitHub (opens in a new tab)">View code on GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project project-row" aria-labelledby="p-locksmith">
+                    <figure class="project-media media-dark" data-reveal>
+                        <img src="images/locksmith-480.webp" width="480" height="480" alt="LockSmith AI logo, an AI-powered secure access web application" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="project-body" data-reveal>
+                        <h3 class="project-title" id="p-locksmith">LockSmith AI</h3>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem</dt>
+                                <dd>Streamline secure access workflows with an AI-powered web application.</dd>
+                            </div>
+                            <div>
+                                <dt>Built</dt>
+                                <dd>Co-built the app. Led all front-end development and integrated the AI functionality, focusing on usability, real-time interaction, and a clean, responsive experience in a security-oriented system.</dd>
+                            </div>
+                            <div>
+                                <dt>Stack</dt>
+                                <dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Groq API</li><li>Python</li></ul></dd>
+                            </div>
+                        </dl>
+                        <a class="text-link" href="https://locksmith-ai.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live app (opens in a new tab)">Open the live app</a>
+                    </div>
+                </article>
+
+                <article class="project project-row project-row-flip" aria-labelledby="p-chat">
+                    <figure class="project-media" data-reveal>
+                        <img
+                            src="images/chat-app-640.webp"
+                            srcset="images/chat-app-640.webp 640w, images/chat-app-1200.webp 1200w"
+                            sizes="(min-width: 960px) 40vw, 100vw"
+                            width="1200" height="609"
+                            alt="Screenshot of the real-time chat application, showing a message list and an input bar"
+                            loading="lazy" decoding="async">
+                    </figure>
+                    <div class="project-body" data-reveal>
+                        <h3 class="project-title" id="p-chat">Real-Time Chat Application</h3>
+                        <dl class="project-facts">
+                            <div>
+                                <dt>Problem</dt>
+                                <dd>Multi-user conversations with real-time updates, in a clean, low-latency interface.</dd>
+                            </div>
+                            <div>
+                                <dt>Built</dt>
+                                <dd>The complete front end in HTML, CSS, and vanilla JavaScript: the UI, message layout, input handling, and user experience. Collaborated on the Socket.IO integration for live messaging.</dd>
+                            </div>
+                            <div>
+                                <dt>Stack</dt>
+                                <dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></dd>
+                            </div>
+                        </dl>
+                        <a class="text-link" href="https://chat-app-node-svtx.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Open the live app (opens in a new tab)">Open the live app</a>
+                    </div>
+                </article>
+
+                <div class="more-projects" data-reveal>
+                    <h3 class="sub-heading">Other projects</h3>
+                    <ul class="rows">
+                        <li>
+                            <a href="https://singhagam.ca/calculator-app/" target="_blank" rel="noopener noreferrer" aria-label="Calculator App (opens in a new tab)">Calculator App</a>
+                            <span class="row-value">Personal project</span>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SinghAgamGit/SEG2105G2" target="_blank" rel="noopener noreferrer" aria-label="Go Web Scraper Using Multithreading (opens in a new tab)">Go Web Scraper Using Multithreading</a>
+                            <span class="row-value">School project</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-leadership" id="leadership" aria-labelledby="leadership-heading">
+            <div class="wrap">
+                <h2 class="section-heading" id="leadership-heading" data-reveal>Leadership</h2>
+                <ul class="posters">
+                    <li class="poster" data-reveal>
+                        <div class="poster-head">
+                            <h3 class="poster-org"><a href="https://hackthehill.com" target="_blank" rel="noopener noreferrer" aria-label="Hack the Hill (opens in a new tab)">Hack the Hill</a></h3>
+                            <p class="poster-dates">May 2026 – Present</p>
+                        </div>
+                        <div class="poster-body">
+                            <span class="logo-tile logo-tile-square"><img src="images/logo-hackthehill-logo-96.webp" width="94" height="96" alt="Hack the Hill logo" loading="lazy" decoding="async"></span>
+                            <div>
+                                <p class="poster-role">Co-President · Ottawa, ON</p>
+                                <ul>
+                                    <li>Co-lead a 40-person organizing team and a $40K+ budget to deliver a 400+ hacker event in September 2026.</li>
+                                    <li>Own sponsor negotiations, agreements, and partner outreach.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="poster" data-reveal>
+                        <div class="poster-head">
+                            <h3 class="poster-org"><a href="https://www.seuo-uosu.com" target="_blank" rel="noopener noreferrer" aria-label="UOSU Board (opens in a new tab)">UOSU Board</a></h3>
+                            <p class="poster-dates">May 2026 – Present</p>
+                        </div>
+                        <div class="poster-body">
+                            <span class="logo-tile logo-tile-square"><img src="images/logo-uosu-logo-96.webp" width="95" height="96" alt="University of Ottawa Students' Union logo" loading="lazy" decoding="async"></span>
+                            <div>
+                                <p class="poster-role">Board of Directors, Faculty of Engineering Representative · University of Ottawa Students' Union · Ottawa, ON</p>
+                                <ul>
+                                    <li>Represent engineering students in governance decisions and oversight of an $8M+ annual operating budget.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <a class = "cgi-logo-link" href = "https://www.cgi.com" target="_blank" rel="noopener noreferrer">
-                <img src = "images/cgi.webp" alt = "CGI logo">
-            </a>
-        </article>
-        <article class = "entry entry-project">
-            <div class = "text">
-                <h3>Intern Developer, Quality Engineering</h3>
-                <span class = "entry-dates">June 2026 – Sept 2026</span>
-                <p class = "entry-org">Tata Consultancy Services · Toronto, ON</p>
-                <ul>
-                    <li>Embedded full-time on-site with a major Canadian bank for the entire term, developing automated BDD API test scenarios in Java with Cucumber, REST Assured, and TestNG for its enterprise payments platform.</li>
-                    <li>Designed and executed end-to-end test cases across chained REST APIs and Kafka event streams, validating JSON payloads, authentication, schema conformance, and request/response field mappings.</li>
-                    <li>Tracked defects in Jira and documented test coverage and requirements analysis in Confluence, working directly with the bank's developers and QEs in an Agile delivery cycle.</li>
-                </ul>
+        </section>
+
+        <section class="section section-about" id="about" aria-labelledby="about-heading">
+            <div class="wrap about-grid">
+                <h2 class="section-heading" id="about-heading" data-reveal>About</h2>
+                <figure class="about-photo" data-reveal>
+                    <img
+                        src="images/agam-singh-400.webp"
+                        srcset="images/agam-singh-400.webp 400w, images/agam-singh-675.webp 675w"
+                        sizes="(min-width: 960px) 320px, 60vw"
+                        width="675" height="900"
+                        alt="Portrait of Agam Singh, wearing a navy turban and glasses"
+                        loading="lazy" decoding="async">
+                </figure>
+                <div class="about-text" data-reveal>
+                    <p class="about-lead">I'm a Computer Engineering co-op student at the University of Ottawa with experience in software development, quality engineering, and applied research.</p>
+                    <p>I'm currently a Developer Co-op at CGI, working on an enterprise payments platform for a major Canadian bank. Before that I was a quality engineering intern at Tata Consultancy Services, and I built UAV and counter-UAS simulation tools as a research assistant at the University of Ottawa.</p>
+                    <p>My work spans Java, Spring, Python, FastAPI, C/C++, SQL, JavaScript, and React, from API design and test automation to real-time systems and web-based visualization tools. I enjoy building practical software systems, testing user flows, debugging issues, and turning technical ideas into clean, usable products.</p>
+                    <p>Outside of development, I take on leadership roles in student organizations and tech initiatives, where I work on communication, execution, event planning, and team coordination. I'm interested in software engineering, cybersecurity, quality assurance, system design, and scalable products.</p>
+                </div>
             </div>
-            <a class = "tcs-logo-link" href = "https://www.tcs.com" target="_blank" rel="noopener noreferrer">
-                <img src = "images/tcs-logo.webp" alt = "Tata Consultancy Services logo">
-            </a>
-        </article>
-        <article class = "entry entry-project">
-            <div class = "text">
-                <h3>Software Research Assistant</h3>
-                <span class = "entry-dates">May 2026 – Sept 2026</span>
-                <p class = "entry-org">Computational Analysis and Research Group, University of Ottawa · Ottawa, ON</p>
-                <ul>
-                    <li>Built a web-based UAV and counter-UAS simulation platform (React 19, Vite, FastAPI) with a 2D Leaflet map and a CesiumJS 3D globe that replays JSON flight telemetry, trails, and camera/radar fields of view over real terrain.</li>
-                    <li>Implemented sensor-planning tools for drawing UAV paths, placing ground cameras and radars, and estimating flight-path coverage; scenarios export as JSON conforming to the group's MATLAB simulator schema, with range/option validation and a maintained log of schema conflicts for supervisor review.</li>
-                    <li>Built the FastAPI backend with signed HTTP-only session authentication, admin-approved accounts, and an on-disk job queue that a remote MATLAB worker polls, reports status to, and uploads results through; deployed frontend and backend behind Nginx and a Cloudflare Tunnel on a self-hosted Ubuntu server.</li>
-                </ul>
+        </section>
+
+        <section class="section section-skills" id="skills" aria-labelledby="skills-heading">
+            <div class="wrap">
+                <h2 class="section-heading" id="skills-heading" data-reveal>Education and skills</h2>
+
+                <div class="education" data-reveal>
+                    <span class="logo-tile logo-tile-fill"><img src="images/logo-uottawa-logo-96.webp" width="138" height="96" alt="University of Ottawa logo" loading="lazy" decoding="async"></span>
+                    <div class="education-main">
+                        <h3 class="education-degree">Honours BASc, Computer Engineering (Co-op)</h3>
+                        <p class="stop-org"><a href="https://www.uottawa.ca/en" target="_blank" rel="noopener noreferrer" aria-label="University of Ottawa (opens in a new tab)">University of Ottawa</a> · Ottawa, ON</p>
+                        <dl class="education-facts">
+                            <div>
+                                <dt>Relevant coursework</dt>
+                                <dd>Data Structures &amp; Algorithms, Software Engineering, Software Construction, Computer Architecture, Digital Systems, Probability &amp; Statistics</dd>
+                            </div>
+                            <div>
+                                <dt>Distinctions</dt>
+                                <dd>Dean's Honour List (Fall 2025); Admissions Scholarship</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <p class="stop-dates education-dates">Sept 2024 – May 2029</p>
+                </div>
+
+                <dl class="skills" data-reveal>
+                    <div class="skill-row">
+                        <dt>Languages</dt>
+                        <dd><ul class="inline-list"><li>Java</li><li>Python</li><li>SQL</li><li>C</li><li>C++</li><li>JavaScript</li></ul></dd>
+                    </div>
+                    <div class="skill-row">
+                        <dt>Backend and systems</dt>
+                        <dd><ul class="inline-list"><li>Spring</li><li>REST APIs</li><li>OpenAPI/Swagger</li><li>FastAPI</li><li>Node.js</li><li>Socket.IO</li><li>Linux (Ubuntu)</li><li>Nginx</li><li>Docker</li><li>QNX RTOS</li></ul></dd>
+                    </div>
+                    <div class="skill-row">
+                        <dt>Testing and quality engineering</dt>
+                        <dd><ul class="inline-list"><li>REST Assured</li><li>Cucumber (BDD)</li><li>TestNG</li><li>Postman</li><li>Maven</li><li>JSON Schema &amp; Mapping Validation</li><li>Kafka Message Validation</li><li>Test Case Design</li><li>Defect Tracking</li></ul></dd>
+                    </div>
+                    <div class="skill-row">
+                        <dt>Tools and practices</dt>
+                        <dd><ul class="inline-list"><li>Git</li><li>GitHub</li><li>Jira</li><li>Confluence</li><li>Figma</li><li>MATLAB</li><li>Agile/Scrum</li><li>Waterfall</li><li>SDLC</li><li>OOP</li></ul></dd>
+                    </div>
+                </dl>
             </div>
-            <a href = "https://www.carg-uottawa.com" target="_blank" rel="noopener noreferrer">
-                <img src = "images/carg-logo.webp" alt = "Computational Analysis and Research Group logo">
-            </a>
-        </article>
-    </div>
-    </main>
-    <main>
-    <div class = "projects">
-        <h2>Projects</h2>
-    <article class = "project">
-        <div class = "text">
-        <h3>Paris Metro Network Analysis</h3>
-        <p>Modeled the Paris Metro network — 376 stations and 933 connections — as an adjacency-list graph in Java, detecting transfer hubs by clustering walking edges with a custom linked-list Union-Find ADT using union-by-size. Implemented Kruskal's algorithm with a priority queue to compute the minimum spanning tree over hub-to-hub segments; the solution was accepted by the UVA Online Judge (Problem 11710) with a 1.42s runtime.</p>
-        <ul>
-        <li>Java</li>
-        </ul>
-        </div>
-        <a href="https://github.com/SinghAgamGit/Data-Structures-and-Algorithms-Programming-assignments" target="_blank">
-            <img src = "images/Paris_metro.png" alt = "Paris Metro map used as the graph model for the union-find and Kruskal's algorithm project">
-        </a>
-    </article>
-        <article class = "project">
-        <div class = "text">
-        <h3>LockSmith AI</h3>
-        <p>Co-built an AI-powered web application to streamline secure access workflows. Led all front-end development and integrated AI functionality to deliver a clean, responsive user experience. Focused on usability, real-time interaction, and practical application of AI in a security-oriented system.</p>
-        <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Groq API</li>
-        <li>Python</li>
-        </ul>
-        </div>
-        <a href="https://locksmith-ai.onrender.com/" target="_blank">
-            <img src = "images/LockSmithAI-logo.png" alt = "LockSmith AI logo, an AI-powered secure access web application">
-        </a>
-        </article>
-    <article class = "project">
-        <div class = "text">
-        <h3>Real-Time Chat Application</h3>
-        <p>Built the complete front-end for a real-time chat application using HTML, CSS, and vanilla JavaScript. Designed the UI, message layout, input handling, and user experience, while collaborating on Socket.IO integration for live messaging. The result is a clean, low-latency interface that supports multi-user conversations and real-time updates.</p>
-        <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        </ul>
-        </div>
-        <a href="https://chat-app-node-svtx.onrender.com" target="_blank">
-            <img src = "images/Node_chat_app.png" alt = "Screenshot of the real-time chat application built with Node.js and Socket.IO">
-        </a>
-    </article>
-    </div>
-    </main>
-    <main>
-    <div class = "entries">
-        <h2>Leadership</h2>
-        <article class = "entry entry-project">
-            <div class = "text">
-                <h3>Co-President</h3>
-                <span class = "entry-dates">May 2026 – Present</span>
-                <p class = "entry-org">Hack the Hill · Ottawa, ON</p>
-                <ul>
-                    <li>Co-lead a 40-person organizing team and a $40K+ budget to deliver a 400+ hacker event in September 2026.</li>
-                    <li>Own sponsor negotiations, agreements, and partner outreach.</li>
-                </ul>
-            </div>
-            <a href = "https://hackthehill.com" target="_blank" rel="noopener noreferrer">
-                <img src = "images/hackthehill-logo.webp" alt = "Hack the Hill logo">
-            </a>
-        </article>
-        <article class = "entry entry-project">
-            <div class = "text">
-                <h3>Board of Directors, Faculty of Engineering Representative</h3>
-                <span class = "entry-dates">May 2026 – Present</span>
-                <p class = "entry-org">University of Ottawa Students' Union · Ottawa, ON</p>
-                <ul>
-                    <li>Represent engineering students in governance decisions and oversight of an $8M+ annual operating budget.</li>
-                </ul>
-            </div>
-            <a href = "https://www.seuo-uosu.com" target="_blank" rel="noopener noreferrer">
-                <img src = "images/uosu-logo.webp" alt = "University of Ottawa Students' Union logo">
-            </a>
-        </article>
-    </div>
-    </main>
-    <main>
-    <div class = "entries">
-        <h2>Education</h2>
-        <article class = "entry entry-project">
-            <div class = "text">
-                <h3>Honours BASc, Computer Engineering (Co-op)</h3>
-                <span class = "entry-dates">Sept 2024 – May 2029</span>
-                <p class = "entry-org">University of Ottawa · Ottawa, ON</p>
-                <p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Software Engineering, Software Construction, Computer Architecture, Digital Systems, Probability & Statistics</p>
-                <p><strong>Distinctions:</strong> Dean's Honour List (Fall 2025); Admissions Scholarship</p>
-            </div>
-            <a href = "https://www.uottawa.ca/en" target="_blank" rel="noopener noreferrer">
-                <img src = "images/uottawa-logo.webp" alt = "University of Ottawa logo">
-            </a>
-        </article>
-    </div>
-    <div class = "skills">
-        <h2>Skills</h2>
-        <div class = "skill-group">
-            <h3>Languages</h3>
-            <ul class = "skill-tags">
-                <li>Java</li>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>C</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-        <div class = "skill-group">
-            <h3>Backend & Systems</h3>
-            <ul class = "skill-tags">
-                <li>Spring</li>
-                <li>REST APIs</li>
-                <li>OpenAPI/Swagger</li>
-                <li>FastAPI</li>
-                <li>Node.js</li>
-                <li>Socket.IO</li>
-                <li>Linux (Ubuntu)</li>
-                <li>Nginx</li>
-                <li>Docker</li>
-                <li>QNX RTOS</li>
-            </ul>
-        </div>
-        <div class = "skill-group">
-            <h3>Testing & Quality Engineering</h3>
-            <ul class = "skill-tags">
-                <li>REST Assured</li>
-                <li>Cucumber (BDD)</li>
-                <li>TestNG</li>
-                <li>Postman</li>
-                <li>Maven</li>
-                <li>JSON Schema & Mapping Validation</li>
-                <li>Kafka Message Validation</li>
-                <li>Test Case Design</li>
-                <li>Defect Tracking</li>
-            </ul>
-        </div>
-        <div class = "skill-group">
-            <h3>Tools & Practices</h3>
-            <ul class = "skill-tags">
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Jira</li>
-                <li>Confluence</li>
-                <li>Figma</li>
-                <li>MATLAB</li>
-                <li>Agile/Scrum</li>
-                <li>Waterfall</li>
-                <li>SDLC</li>
-                <li>OOP</li>
-            </ul>
-        </div>
-    </div>
-    </main>
-    <footer>
-        <h2 class = "h2-footer" >Other Projects</h2>
-        <div class = "footer-text">
-        <div class = "footer-text-box">
-        <h3>Personal projects</h3>
-        <ul>
-            <li>
-                <a href = "https://singhagam.ca/calculator-app/" target = "_blank">
-                    calculator app
-                </a>
-            </li>
-        </ul>
-        </div>
-        <div class = "footer-text-box">
-        <h3>School Projects</h3>
-        <ul>
-            <li>
-                <a href = "https://github.com/SinghAgamGit/SEG2105G2" target = "_blank">
-                    GO Web scrapper using multithreading
-                </a>
-            </li>
-        </ul> 
-        </div>
-        </div>
-        <h2 class = "h2-footer">Contact</h2> 
-        <ul class = "icons">
+        </section>
+
+        <section class="section section-contact" id="contact" aria-labelledby="contact-heading">
+            <div class="wrap">
+                <h2 class="section-heading" id="contact-heading" data-reveal>Get in touch</h2>
+                <a class="contact-email" href="mailto:contact@singhagam.ca" data-reveal>contact@singhagam.ca</a>
+                <ul class="contact-rows" data-reveal>
                     <li>
-                <a href = "https://github.com/SinghAgamGit" target="_blank">
-                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.1727 20.8173 18.8977 19.5415 20.1198 17.8395C21.3419 16.1376 21.9995 14.0953 22 12C22 6.475 17.525 2 12 2Z" stroke="#000000" stroke-linejoin="round"  class = "social">
-                   </path> </g></svg>
-            </a> 
-        </li>
-             <li>
-                <a href = "https://www.linkedin.com/in/agamsinghuottawa/" target="_blank">
-                    <svg fill="#000000" version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;} </style> 
-                        <path d="M26.2,4H5.8C4.8,4,4,4.8,4,5.7v20.5c0,0.9,0.8,1.7,1.8,1.7h20.4c1,0,1.8-0.8,1.8-1.7V5.7C28,4.8,27.2,4,26.2,4z M11.1,24.4 H7.6V13h3.5V24.4z M9.4,11.4c-1.1,0-2.1-0.9-2.1-2.1c0-1.2,0.9-2.1,2.1-2.1c1.1,0,2.1,0.9,2.1,2.1S10.5,11.4,9.4,11.4z M24.5,24.3 H21v-5.6c0-1.3,0-3.1-1.9-3.1c-1.9,0-2.1,1.5-2.1,2.9v5.7h-3.5V13h3.3v1.5h0.1c0.5-0.9,1.7-1.9,3.4-1.9c3.6,0,4.3,2.4,4.3,5.5V24.3z " class = "social"></path> 
-                        <rect id="_x3C_Transparent_Rectangle_x3E_" y="0" class="st0" width="32" height="32"></rect>
-                     </g>
-                    </svg>
-            </a> 
-        </li>
-        <li>
-                <a href = "mailto:contact@singhagam.ca" target="_blank">
-                    <svg viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#1572]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path class = "social" d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#1572]"> </path> </g> </g> </g> </g></svg>     
-                </a> 
-        </li>
-        </ul>
+                        <a href="https://github.com/SinghAgamGit" target="_blank" rel="noopener noreferrer" aria-label="GitHub: SinghAgamGit (opens in a new tab)">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">SinghAgamGit</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/agamsinghuottawa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn: agamsinghuottawa (opens in a new tab)">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">agamsinghuottawa</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>Agam Singh · singhagam.ca</p>
+            <a class="text-link" href="#top">Back to top</a>
+        </div>
     </footer>
-    </div>
+
     <script>
     (function () {
-        var link = document.querySelector('.hint-card > a');
-        var hint = document.querySelector('.logo-hint');
-        if (!link || !hint) return;
-        // Skip rendering entirely if already dismissed this session.
-        if (sessionStorage.getItem('logoHintDismissed') === 'true') {
-            hint.remove();
+        var root = document.documentElement;
+
+        // Theme switch: OS setting by default, a manual choice is remembered.
+        var buttons = document.querySelectorAll('[data-theme-choice]');
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        function current() {
+            return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+        }
+        var themeMetas = document.querySelectorAll('meta[name="theme-color"]');
+        function sync() {
+            var t = current();
+            buttons.forEach(function (b) {
+                b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-choice') === t));
+            });
+            // Browser chrome follows the page, including a manual choice that differs from the OS.
+            var chrome = getComputedStyle(root).getPropertyValue('--bg').trim();
+            themeMetas.forEach(function (m) { m.setAttribute('content', chrome); });
+        }
+        buttons.forEach(function (b) {
+            b.addEventListener('click', function () {
+                var t = b.getAttribute('data-theme-choice');
+                root.setAttribute('data-theme', t);
+                try { localStorage.setItem('theme', t); } catch (e) {}
+                sync();
+            });
+        });
+        if (mq.addEventListener) mq.addEventListener('change', sync);
+        sync();
+
+        // Header tone step once the page scrolls.
+        var header = document.querySelector('.site-header');
+        function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Phone menu: a dropdown under the bar. Closes on link tap, Escape, a tap outside, or growing past phone width.
+        // It never locks page scroll.
+        var toggle = document.querySelector('.menu-toggle');
+        var label = toggle.querySelector('.menu-label');
+        function setMenu(open, refocus) {
+            header.classList.toggle('menu-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            label.textContent = open ? 'Close' : 'Menu';
+            if (!open && refocus) toggle.focus();
+        }
+        toggle.addEventListener('click', function () {
+            setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+        document.querySelectorAll('.site-nav a').forEach(function (a) {
+            a.addEventListener('click', function () { setMenu(false); });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && header.classList.contains('menu-open')) setMenu(false, true);
+        });
+        document.addEventListener('click', function (e) {
+            if (header.classList.contains('menu-open') && !header.contains(e.target)) setMenu(false);
+        });
+        var wide = window.matchMedia('(min-width: 768px)');
+        function onWide() { if (wide.matches) setMenu(false); }
+        if (wide.addEventListener) wide.addEventListener('change', onWide);
+
+        if (!('IntersectionObserver' in window)) {
+            root.classList.add('no-io');
             return;
         }
-        // Reveal (fade in) only when not previously dismissed.
-        requestAnimationFrame(function () { hint.classList.add('is-visible'); });
-        link.addEventListener('click', function () {
-            sessionStorage.setItem('logoHintDismissed', 'true');
-            hint.classList.remove('is-visible'); // fade out
-            setTimeout(function () { if (hint.parentNode) hint.remove(); }, 450);
+
+        // Highlight the section currently in view in the nav.
+        var links = {};
+        document.querySelectorAll('.site-nav a').forEach(function (a) {
+            links[a.getAttribute('href').slice(1)] = a;
         });
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                var a = links[e.target.id];
+                if (!a || !e.isIntersecting) return;
+                Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
+                a.setAttribute('aria-current', 'true');
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(links).forEach(function (id) {
+            var s = document.getElementById(id);
+            if (s) spy.observe(s);
+        });
+
+        // Entrance reveals, staggered within each section. Skipped under reduced motion (CSS keeps content visible).
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        document.querySelectorAll('main > section').forEach(function (section) {
+            section.querySelectorAll('[data-reveal]').forEach(function (el, i) {
+                el.style.setProperty('--reveal-delay', Math.min(i, 5) * 70 + 'ms');
+            });
+        });
+        root.classList.add('reveal-ready');
+        var reveal = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (!e.isIntersecting) return;
+                e.target.classList.add('is-in');
+                reveal.unobserve(e.target);
+            });
+        }, { rootMargin: '0px 0px -8% 0px' });
+        document.querySelectorAll('[data-reveal]').forEach(function (el) { reveal.observe(el); });
     })();
     </script>
 </body>
